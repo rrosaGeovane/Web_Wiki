@@ -1,0 +1,79 @@
+/* Reset básico */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Estilização geral do body */
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background: #f4f4f4;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  height: 100vh;
+  padding-top: 50px;
+}
+
+/* Container da navegação */
+.nav {
+  list-style: none;
+  display: flex;
+  border-bottom: 2px solid #ccc;
+  background: #fff;
+  border-radius: 10px 10px 0 0;
+  overflow: hidden;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+}
+
+/* Itens da navegação */
+.nav-item {
+  margin: 0;
+}
+
+/* Links */
+.nav-link {
+  display: block;
+  padding: 12px 24px;
+  color: #555;
+  text-decoration: none;
+  font-weight: 500;
+  transition: all 0.3s ease;
+}
+
+/* Hover */
+.nav-link:hover {
+  background: #f0f0f0;
+  color: #000;
+}
+
+/* Aba ativa */
+.nav-link.active {
+  background: #007bff;
+  color: #fff;
+  border-bottom: 2px solid #007bff;
+}
+
+/* Aba desabilitada */
+.nav-link.disabled {
+  color: #aaa;
+  cursor: not-allowed;
+}
+
+/* Responsividade */
+@media (max-width: 600px) {
+  .nav {
+    flex-direction: column;
+    border-radius: 10px;
+  }
+
+  .nav-link {
+    text-align: center;
+    border-bottom: 1px solid #ddd;
+  }
+
+  .nav-link.active {
+    border-bottom: none;
+  }
+}
